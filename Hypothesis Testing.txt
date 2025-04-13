@@ -1,0 +1,38 @@
+AIM:- Hypothesis Testing
+a. Formulate null and alternative hypotheses for a given problem.
+b. Conduct a hypothesis test using appropriate statistical tests (e.g., t-test, chi-square test).
+c. Interpret the results and draw conclusions based on the test outcomes. 
+
+----------------------------------------------------------------------------------------------------
+
+CODE:-
+
+# T-TEST
+from scipy.stats import ttest_1samp
+import numpy as np
+
+ages = [45, 89, 23, 46, 12, 69, 45, 24, 34, 67]
+print(ages)
+mean = np.mean(ages)
+print(mean)
+
+t_test, p_val = ttest_1samp(ages, 30)
+print("P-value is: ", p_val)
+
+if p_val < 0.05:
+    print(" We can reject the null hypothesis")
+else:
+    print("We can accept the null hypothesis")
+
+#CHI-SQUARE TEST
+from scipy.stats import chi2_contingency
+
+data = [[207, 282, 241], [234, 242, 232]]
+stat, p, dof, expected = chi2_contingency(data)
+alpha = 0.05
+print("p value is " + str(p))
+
+if p <= alpha:
+    print('Dependent (reject H0)')
+else:
+    print('Independent (H0 holds true)')
