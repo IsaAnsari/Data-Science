@@ -1,0 +1,35 @@
+AIM:- ANOVA (Analysis of Variance)
+a. Perform one-way ANOVA to compare means across multiple groups.
+b. Conduct post-hoc tests to identify significant differences between group means.
+
+--------------------------------------------------------------------------------------
+
+CODE:-
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import scipy.stats as stats
+from scikit_posthocs import posthoc_tukey
+
+np.random.seed(12)
+races = ["asian","black","hispanic","other","white"]
+
+# Generate random data
+voter_race = np.random.choice(a= races,p = [0.05, 0.15 ,0.25, 0.05, 0.5],size=1000)
+voter_age = stats.poisson.rvs(loc=18,mu=30,size=1000)
+
+# Group age data by race
+voter_frame = pd.DataFrame({"race":voter_race,"age":voter_age})
+groups = voter_frame.groupby("race").groups
+
+# Etract individual groups
+asian = voter_age[groups["asian"]]
+black = voter_age[groups["black"]]
+hispanic = voter_age[groups["hispanic"]]
+other = voter_age[groups["other"]]
+white = voter_age[groups["white"]]
+
+# Perform the ANOVA
+print(stats.f_oneway(asian, black, hispanic, other, white))
+print(posthoc_tukey(voter_frame,val_col="age",group_col="race"))
