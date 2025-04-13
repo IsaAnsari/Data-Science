@@ -1,0 +1,29 @@
+AIM:- Logistic Regression and Decision Tree
+a) Build a logistic regression model to predict a binary outcome.
+b) Evaluate the model's performance using classification metrics (e.g., accuracy, precision, recall).
+c) Construct a decision tree model and interpret the decision rules for classification. 
+
+------------------------------------------------------------------------------------------------------
+
+CODE :-
+
+import numpy
+from sklearn import linear_model
+import pandas as pd
+
+X = numpy.array([3.78, 2.44, 2.09, 0.14, 1.72, 1.65, 4.92, 4.37, 4.96, 4.52, 3.69, 5.88]).reshape(-1,1)
+y = numpy.array([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1])
+logr = linear_model.LogisticRegression()
+logr.fit(X,y)
+
+predicted = logr.predict(numpy.array([3.46]).reshape(-1,1))
+print(predicted)
+
+df = pd.read_csv("D:/Data Science/Iris.csv")
+X1=numpy.array(df['SepalLengthCm']).reshape(-1,1)
+y=df['Species']
+logr = linear_model.LogisticRegression()
+logr.fit(X1,y)
+
+predicted = logr.predict(numpy.array([3.4]).reshape(-1,1))
+print(predicted)
