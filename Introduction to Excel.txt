@@ -1,0 +1,151 @@
+AIM:- Introduction to Excel
+a. Perform conditional formatting on a dataset using various criteria.
+b. Create a pivot table to analyze and summarize data.
+c. Use VLOOKUP function to retrieve information from a different worksheet or table.
+d. Perform what-if analysis using Goal Seek to determine input values for desired output.
+
+------------------------------------------------------------------------------------------------
+
+a. Perform conditional formatting on a dataset using various criteria.
+
+______________
+1) Equal to :-
+______________
+
+
+# With Numbers :-
+-----------------
+
+Step 1:- Open Excel and create a new excel sheet. Select the range C2:H11 for all of the stat values.
+
+Step 2:- Click on the Conditional Formatting icon , from Home menu. Select Highlight Cell
+	 Rules from the drop-down menu and select Equal To.. from the menu.
+
+Step 3:- Enter “50” into the input field. And select the appearance.
+
+Step 4:- Now, the cells with values equal to “50” will be highlighted in red:
+
+
+# With Text :-
+--------------
+
+Step 1:- Open Excel and create a new excel sheet. Select the range A2:A11 for all of the stat values.
+
+Step 2:- Click on the Conditional Formatting icon , from Home menu. Select Highlight Cell
+	 Rules from the drop-down menu and select Equal To.. from the menu.
+
+Step 3:- Enter “Jigglypuff” into the input field. And select the appearance.
+
+Step 4:- Now, the cells with values equal to “Jigglypuff” will be highlighted in red:
+
+__________________
+2) Greater than :-
+__________________
+
+
+# With Numbers :-
+-----------------
+
+Step 1:- Open Excel and create a new excel sheet. Select the range C2:H11 for all of the stat values.
+
+Step 2:- Click on the Conditional Formatting icon , from Home menu. Select Highlight Cell
+	 Rules from the drop-down menu and select Greater Than.. from the menu.
+
+Step 3:- Enter “50” into the input field. And select the appearance.
+
+Step 4:- Now, the cells with values greater than “50” will be highlighted in red:
+
+
+# With Text :-
+--------------
+
+Step 1:- Open Excel and create a new excel sheet. Select the range A2:A11 for all of the stat values.
+
+Step 2:- Click on the Conditional Formatting icon , from Home menu. Select Highlight Cell
+	 Rules from the drop-down menu and select Greater Than.. from the menu.
+
+Step 3:- Enter “Jigglypuff” into the input field. And select the appearance.
+
+Step 4:- Now, the cells with text values later in the alphabet than “Jigglypuff” will be highlighted in red:
+
+_______________
+3) Less than :-
+_______________
+
+
+# With Numbers :-
+-----------------
+
+Step 1:- Open Excel and create a new excel sheet. Select the range C2:H11 for all of the stat values.
+
+Step 2:- Click on the Conditional Formatting icon , from Home menu. Select Highlight Cell
+	 Rules from the drop-down menu and select Less Than.. from the menu.
+
+Step 3:- Enter “50” into the input field. And select the appearance.
+
+Step 4:- Now, the cells with values less than “50” will be highlighted in red:
+
+
+# With Text :-
+--------------
+
+Step 1:- Open Excel and create a new excel sheet. Select the range A2:A11 for all of the stat values.
+
+Step 2:- Click on the Conditional Formatting icon , from Home menu. Select Highlight Cell
+	 Rules from the drop-down menu and select Less Than.. from the menu.
+
+Step 3:- Enter “Jigglypuff” into the input field. And select the appearance.
+
+Step 4:- Now, the cells with text values earlier in the alphabet than “Jigglypuff” will be highlighted in red:
+
+________________________________________________________________________________________________________________________
+
+
+b. Create a pivot table to analyze and summarize data.
+
+
+Step 1:- Open Excel and create a new excel sheet.
+
+Step 2:- Select Table data A1:H11 and Click on the PivotTable , from Insert menu.
+
+Step 3:- The following dialog box appears. The default location for a new pivot table is New
+	 Worksheet. Select Existing Worksheet then click on any cell from current sheet for location
+	 of Pivot Table.
+
+Step 4:- Click Ok. Then, it will create a pivot table.
+
+Step 5:- Drag the following fields to the following areas.
+
+_________________________________________________________________________________________________________________________
+
+
+c. Use VLOOKUP function to retrieve information from a different worksheet or table.
+
+
+Step 1:- Open Excel and create a new excel sheet.
+
+Step 2:- Use VLOOKUP Function to find the name based on ID number. 
+
+Step 3:- After successfully using VLOOKUP function. The Function Return #N/A value.
+
+Step 4:- Let feed a value to it, type 5(cell:L3)
+
+__________________________________________________________________________________________________________________________
+
+
+d. Perform what-if analysis using Goal Seek to determine input values for desired output.
+
+
+Step 1:- Set up the Excel Cells for Goal Seek as given below.
+
+Step 2:- Use PMT function in the cell EMI(C6) to find the value. 
+
+Step 3:- Value of EMI.
+
+Perform the Analysis with Goal seek.
+Step 4:- Click on the What if Analysis from the DATA Menu. Then select Goal Seek option. 
+
+Step 5:- Goal seek Dialog Box appear. Type cell EMI(C6) in Set cell box , Type -50000 to
+	 value box, Type cell Interest_Rate (C2) in the By changing cell box. And Click OK.
+
+Step 6:- Goal Seek produces a result and Found the Solution Using C6 as shown below – 
