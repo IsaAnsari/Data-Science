@@ -1,0 +1,52 @@
+AIM:- Data Frames and Basic Data Pre-processing
+a. Read data from CSV and JSON files into a data frame.
+b. Perform basic data pre-processing tasks such as handling missing values and outliers.
+c. Manipulate and transform data using functions like filtering, sorting, and grouping. 
+
+-------------------------------------------------------------------------------------------
+
+CODE:-
+
+import json
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+#creating a data frame
+df=pd.read_csv("D:\Data Science\CardioGoodFitness.csv")
+print(df.head())
+
+#missing value and oulines
+print(df.isnull().sum())
+
+df1=df.dropna(axis=0)
+print(df1.head())
+print(df1.isnull().sum())
+
+df['MaritalStatus']=df['MaritalStatus'].fillna('Single')
+print(df['MaritalStatus'])
+print(df.isnull().sum())
+plt.scatter(x=df['Age'], y=df['Fitness'])
+plt.show()
+
+#sorting and grouping
+sorted_df = df.sort_values(by='Age', ascending=False)
+print(sorted_df)
+
+mcount = df.groupby('MaritalStatus')['MaritalStatus'].count()
+print(mcount)
+
+#read data from json file
+f=open("D:\Data Science\iris.json")
+d=json.load(f)
+
+df = pd.DataFrame(d)
+print(df)
+print(df.isnull().sum())
+
+df1 = df.dropna(axis=0)
+print(df1.head())
+
+df['species']=df['species'].fillna('setosa')
+print(df['species'])
+print(df.isnull().sum())
